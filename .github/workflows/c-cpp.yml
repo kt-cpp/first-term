@@ -27,7 +27,8 @@ jobs:
         cmake ..
         make
         cd ../tests
-        ./test_256.sh
+        EXEC=mul ./test.sh
+        EXEC=sub ./test.sh
         
     - if: ${{ github.head_ref == 'vector' }}
       name: vector-tests-release
